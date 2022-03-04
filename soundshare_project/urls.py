@@ -19,5 +19,6 @@ from soundshare import views
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('soundshare/', include('soundshare.urls')),
     path('admin/', admin.site.urls),
 ]
