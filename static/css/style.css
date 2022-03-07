@@ -61,4 +61,6 @@ div{
     font-size: 8px;
     color: #787878;
 }
-
+.box input[type="text"],.box input[type="password"]{
+  border-radius: 10% / 50%;
+}
