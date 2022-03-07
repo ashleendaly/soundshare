@@ -5,8 +5,10 @@ body{
 	margin: 0 auto;
 	padding: 0;
 }
-
-.nav{
+div{
+	display: block;
+}
+.nav {
 	position: relative;
 	z-index: 1500px;
 	height: 100px;
@@ -15,13 +17,18 @@ body{
 	border-bottom: 1px solid #000;
 }
 
-.nav .guide{
+.nav .top{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.nav .top .guide{
 	margin: 0 auto;
 	width: 100%;
 	height: 100px;
 }
 
-.nav .guide li{
+.nav .top .guide li{
 	list-style: none;
 	float: left;
 	width: 100px;
@@ -34,17 +41,17 @@ body{
 	
 }
 
-.nav .guide .logo{
-    width:400px;
+.nav .top .guide .logo{
+    width:300px;
 	font-size: 38px;
 }
 
-.nav .guide .ser{
-	width: 450px;
+.nav .top .guide .ser{
+	width: 350px;
 	height: 100%;
 }
 
-.nav .guide .choose{
+.nav .top .guide .choose{
 	background-color: #333333;
 	color:white;
 }
