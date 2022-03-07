@@ -64,9 +64,13 @@ div{
 
 /* Set the style of the username and password input */
 .box input[type="text"],.box input[type="password"]{
+	margin: auto;
 	border-radius: 10% / 50%;
-	height: /*to be confirmed*/;
-	width: /*to be confirmed*/;
+	/*to be confirmed;
+	height:
+	width:
+	to be confirmed*/;
+	padding: 70px 0;
 }
 /* Sets the style of the textbox when it gets focus */
 .box input[type="text"]:focus,.box input[type="password"]:focus {
