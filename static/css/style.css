@@ -69,12 +69,15 @@ div{
 	/*to be confirmed;
 	height:
 	width:
-	to be confirmed*/;
 	padding: 70px 0;
+	*/;
 }
+
 /* Sets the style of the textbox when it gets focus */
 .box input[type="text"]:focus,.box input[type="password"]:focus {
-	width: /*to be confirmed*/;
+	/*to be confirmed
+	width:
+	*/;
 	border-color: #2ecc71;
 }
 
