@@ -24,10 +24,10 @@ class UserProfile(models.Model):
 
 
 class Song(models.Model):
-    views = models.IntegerField()
-    likes = models.IntegerField()
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
     creator = models.ManyToManyField(UserProfile)
-    average_rating = models.IntegerField()
+    average_rating = models.IntegerField(default=0)
     album_title = models.CharField(max_length=64)
     link = models.URLField(unique=True)
     title = models.CharField(max_length=64)
