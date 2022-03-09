@@ -4,6 +4,14 @@ window.onload = function (){
     var img = document.getElementsByClassName("pic1")[0];
     var imgarr = ['../static/image/github.png','../static/image/index.png']
     var index = 0;
+    setInterval(function (){
+            index++;
+            if (index>=imgarr.length){
+                index = 0
+            }
+            img.src = imgarr[index]
+        },
+        10000)
     prev.onclick = function (){
         index--;
         if (index<0){
@@ -18,4 +26,5 @@ window.onload = function (){
         }
         img.src = imgarr[index];
     }
+
 }
