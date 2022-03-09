@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
-<link rel="stylesheet" href="/static/css/style.css">
     <head>
+		<link rel="stylesheet" href="{% static "css/style.css" %}" >
+		<script type="text/javascript" src="{% static "js/scr.js" %}">
+		</script>
         <title>Index</title>
     </head>
     <body>
@@ -16,10 +19,27 @@
 					<li class="ser"><input type="search"></li>
 					<li>Background</li>
 					<li class="login">Login</li>
-					<input type="text" name="" placeholder="Username">
-					<input type="password" name="" placeholder="password">
-    				<input type="submit" name="" value="Login">
 				</ul>
+			</div>
+		</div>
+		<!--------Banner----------->
+		<div class="banner">
+			<div class="arrows">
+				<div class="leftarr">
+					<button class="prev">
+					<img class="prevarr" src="{% static "image/left.jpg" %}" alt="leftarrow">
+					</button>
+				</div>
+				<div class="picture">
+					<img class="pic1" src="{% static "image/github.png" %}" alt="test1">
+				</div>
+				<div class="rightarr">
+					<button class="next">
+					<img class="nextarr" src="{% static "image/right.png" %}" alt="rightarrow">
+					</button>
+				</div>
+				<div class="switch">
+				</div>
 			</div>
 		</div>
     </body>
