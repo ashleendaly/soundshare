@@ -21,3 +21,18 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.username_text
+
+
+class Song(models.Model):
+    views = models.IntegerField(min_value=0)
+    likes = models.IntegerField(min_value=0)
+    creator = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    average_rating = models.IntegerField(min_value=0)
+    album_title = models.CharField(max_length=64)
+    link = models.URLField()
+    title = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.title
+
+
