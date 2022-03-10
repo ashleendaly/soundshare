@@ -1,30 +1,47 @@
 window.onload = function (){
+    var imglist = document.getElementsByClassName("outer")[0];
+    var index = 0;
+    var imgnub = document.getElementsByClassName("pic1");
+    var imgdiv = document.getElementById("navdiv");
+    var allA = document.getElementsByClassName("a1");
     var prev = document.getElementsByClassName("prev")[0];
     var next = document.getElementsByClassName("next")[0];
-    var img = document.getElementsByClassName("pic1")[0];
-    var imgarr = ['../static/image/github.png','../static/image/index.png']
-    var index = 0;
-    setInterval(function (){
-            index++;
-            if (index>=imgarr.length){
-                index = 0
-            }
-            img.src = imgarr[index]
-        },
-        10000)
-    prev.onclick = function (){
-        index--;
-        if (index<0){
-            index= imgarr.length-1
-        }
-        img.src = imgarr[index];
+    imglist.style.width = 912*imgnub.length+"px";
+    imgdiv.style.left= (912-5*imgnub.length)/2 + "px";
+    allA[index].style.backgroundColor = "#000000";
+    var timer;
+    for (var i = 0; i < allA.length; i++) {
+        allA[i].number = i;
+        allA[i].onclick = function (){
+            clearInterval(timer);
+            index = this.number;
+            setcolor();
+            move(imglist,"left",-912*index,50,function (){
+                switchbanner();
+            })
+        };
     }
-    next.onclick = function () {
-        index++;
-        if(index>imgarr.length-1){
-            index=0
+    switchbanner();
+
+
+    function setcolor(){
+        if (index>=imgnub.length-1){
+            index = 0;
+            imglist.style.left=0;
         }
-        img.src = imgarr[index];
+        for (var i = 0; i < allA.length; i++) {
+            allA[i].style.backgroundColor="";
+        }
+        allA[index].style.backgroundColor="#000000";
     }
 
+    function switchbanner(){
+        setInterval(function (){
+            index++;
+            index %= imgnub.length;
+            move(imglist,"left",-912*index,15,function (){
+                setcolor();
+            })
+        },5000)
+    }
 }

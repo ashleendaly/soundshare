@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
 		<link rel="stylesheet" href="{% static "css/style.css" %}" >
-		<script type="text/javascript" src="{% static "js/scr.js" %}">
-		</script>
+		<script type="text/javascript" src="{% static "js/movetool.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/scr.js" %}"></script>
+
         <title>Index</title>
     </head>
     <body>
@@ -18,28 +19,36 @@
 					<li class="l2">Upload</li>
 					<li class="ser"><input type="search"></li>
 					<li class="l3">Background</li>
-					<li class="login">Login</li>
+					<li class="login"><a href="/soundshare/login/">Login</a> </li>
 				</ul>
 			</div>
 		</div>
 		<!--------Banner----------->
 		<div class="banner">
 			<div class="arrows">
-				<div class="leftarr">
-					<button class="prev">
-					<img class="prevarr" src="{% static "image/left.png" %}" alt="leftarrow">
-					</button>
-				</div>
 				<div class="picture">
-					<img class="pic1" src="{% static "image/github.png" %}" alt="test1">
+					<ul class="outer">
+						<li>
+							<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
+						</li>
+						<li>
+							<img class="pic1" src="{% static "image/banner2.png" %}" alt="test2">
+						</li>
+						<li>
+							<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
+						</li>
+					</ul>
+					<div id="navdiv">
+						<a class="a1" href="javascript:;"></a>
+						<a class="a1" href="javascript:;"></a>
+					</div>
 				</div>
-				<div class="rightarr">
-					<button class="next">
-					<img class="nextarr" src="{% static "image/right.png" %}" alt="rightarrow">
-					</button>
-				</div>
-				<div class="switch">
-				</div>
+			</div>
+		</div>
+		<!--------Music----------->
+		<div class="music">
+			<div class="m-left">
+
 			</div>
 		</div>
     </body>
