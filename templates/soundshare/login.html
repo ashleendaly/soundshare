@@ -17,7 +17,19 @@
             <input type="password" name="" placeholder="password">
             <input type="submit" name="" value="Login">
         </div>
-        <h2>Don't have an account? Register now:<h2>
-            
+        <h2>Don't have an account? Register now:</h2>
     </body>
 </html>
+{% load staticfiles %}
+{% block body_block %}
+    {% if registered %}
+        <strong>Thank you for registering!</strong>
+        <a href="index.html">Return to the homepage.</a>
+    {% else %}
+    <form id="user_form" method="post" action="login.html" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <input type="submit" name="submit" value="Register" /></form>
+    {% endif %}
+{% endblock %}
