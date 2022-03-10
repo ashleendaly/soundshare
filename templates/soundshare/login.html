@@ -1,20 +1,31 @@
 <!DOCTYPE html>
+{% load staticfiles %}
+
 <html>
 <link rel="stylesheet" href="/static/css/style.css">
-    <head>
-        <title>Login</title>
+
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <title>
+            Login -
+            {% block title_block %}
+            Team WAD10 says... Hey there partner!
+            {% endblock %}
+        </title>
     </head>
+
     <body>
-        <h1>Team WAD10 says...</h1>
-        <div>
-            hey there partner! <br />
-            <strong>{{ boldmessage }}</strong><br />
-        </div>
-        <div>
-            <a href="/soundshare/">Index</a><br />
-            <input type="text" name="" placeholder="Username">
-            <input type="password" name="" placeholder="password">
-            <input type="submit" name="" value="Login">
-        </div>
+    <div>
+        <ul>
+            {% if user.is_authenticated %}
+                Good to see you!
+            <!-- There shuold be an index link for users to return-->
+            {% else %}
+            <li><a href="{% url 'login' %}">Login now!</a></li>
+            <li><a href="{% url 'register' %}">Register now!</a></li>
+            {% endif %}
+        </ul>
+    </div>
     </body>
 </html>
+
