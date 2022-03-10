@@ -151,18 +151,14 @@ button {
 .box input[type="text"],.box input[type="password"]{
 	margin: auto;
 	border-radius: 10% / 50%;
-	/*to be confirmed;
-	height:
-	width:
+	height: 200px;
+	width: 500px;
 	padding: 70px 0;
-	*/;
+	;
 }
 
 /* Sets the style of the textbox when it gets focus */
 .box input[type="text"]:focus,.box input[type="password"]:focus {
-	/*to be confirmed
-	width:
-	*/;
 	border-color: #2ecc71;
 }
 
