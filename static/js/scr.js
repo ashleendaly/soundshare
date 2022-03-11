@@ -36,7 +36,7 @@ window.onload = function (){
     }
 
     function switchbanner(){
-        setInterval(function (){
+        timer = setInterval(function (){
             index++;
             index %= imgnub.length;
             move(imglist,"left",-912*index,15,function (){
