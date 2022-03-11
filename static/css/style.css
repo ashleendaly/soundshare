@@ -155,8 +155,24 @@ button {
 	border-width: 0 1px;
 	z-index: 0;
 }
+.banner .background .arrows .music .music-left{
+	position: absolute;
+	width: 650px;
+	height: 100%;
+	border: 1px solid #d3d3d3;
+	border-width: 0 1px;
+}
+.banner .background .arrows .music .music-left .fg1{
+	width: 100%;
+	height: 75px;
+}
+.banner .background .arrows .music .music-right{
+	position: absolute;
+	width: 260px;
+	left: 651px;
 
 
+}
 
 
 
