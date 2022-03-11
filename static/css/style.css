@@ -162,9 +162,67 @@ button {
 	border: 1px solid #d3d3d3;
 	border-width: 0 1px;
 }
+
+.banner .background .arrows .music .music-left .logo2{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+}
+.banner .background .arrows .music .music-left .part1{
+	width: 100%;
+	height: 85px;
+}
+
+
 .banner .background .arrows .music .music-left .fg1{
+	position: absolute;
 	width: 100%;
 	height: 75px;
+	top: 10px;
+}
+.banner .background .arrows .music .music-left #word1{
+	height: 40px;
+	width: 150px;
+	position: absolute;
+	left: 40px;
+	top: 10px;
+	margin: 0 auto;
+}
+.banner .background .arrows .music .music-left #word2{
+	position: absolute;
+	left: 200px;
+	top: 10px;
+	height: 40px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+}
+.banner .background .arrows .music .music-left #word3{
+	position: absolute;
+	left: 262px;
+	top: 10px;
+	height: 40px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+}
+.banner .background .arrows .music .music-left #word4{
+	position: absolute;
+	left: 324px;
+	top: 10px;
+	height: 40px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
+}
+.banner .background .arrows .music .music-left #word5{
+	position: absolute;
+	left: 386px;
+	top: 10px;
+	height:40px;
+	width: 62px;
+	margin: 0 auto;
+	text-align: center;
 }
 .banner .background .arrows .music .music-right{
 	position: absolute;
