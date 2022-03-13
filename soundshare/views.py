@@ -9,5 +9,9 @@ def index(request):
 
 def login(request):
     context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
-    return render(request,'soundshare/login.html',context=context_dict)
+    return render(request, 'soundshare/login.html', context=context_dict)
 
+
+def signup(request):
+    context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
+    return render(request, 'soundshare/signup.html', context=context_dict)

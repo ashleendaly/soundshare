@@ -14,12 +14,11 @@
 			<div class="top">
 				<ul class="guide">
 					<li class="logo" ><img class="logopic" alt="logo" src="{% static "image/Soundshare.png" %}"></li>
-					<li class="choose">Index</li>
+					<li onclick="javascript:document.getElementById('01').click()" class="choose">Index<a id="01" href="/soundshare/"></a></li>
 					<li class="l1">Music</li>
 					<li class="l2">Upload</li>
 					<li class="ser"><input type="search"></li>
-					<li class="l3">Background</li>
-					<li class="login"><a href="/soundshare/login/">Login</a> </li>
+					<li onclick="javascript:document.getElementById('02').click()" class="login">Login<a id="02" href="/soundshare/login/"></a></li>
 				</ul>
 			</div>
 		</div>

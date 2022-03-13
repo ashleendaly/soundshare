@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: bgtx;
+	src: url("../font/bgtx-font.ttf");
+}
+@font-face {
+	font-family: wljh;
+	src: url("../font/wljh-font.ttf");
+}
+@font-face {
+	font-family: cxh;
+	src: url("../font/cxh-font.ttf");
+}
+body{
+	width: 100%;
+	height: 760px;
+	border: 0;
+	margin: 0 auto;
+	padding: 0;
+	background: #F1F1F1;
+}
+#login{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#logo{
+	position: absolute;
+	top: 50px;
+	left: 70px;
+	width: 200px;
+	height: 88px;
+}
+#logo3{
+	width: 200px;
+	height: 88px;
+}
+#login #mid{
+	position: absolute;
+	top: 100px;
+	left: 350px;
+	width: 820px;
+	height: 600px;
+	margin: 0 auto;
+}
+#pic{
+	position: absolute;
+	left: 0;
+	width: 410px;
+	height: 100%;
+}
+#pic #pic1{
+	position: absolute;
+	left: 0;
+	width: 410px;
+	height: 100%;
+}
+#ls{
+	position: absolute;
+	left: 410px;
+	width: 410px;
+	height: 600px;
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+}
+#login-login{
+	position: absolute;
+	border-right: 1px solid black;
+	left: 80px;
+	font-family: cxh;
+	font-weight: bold;
+	font-size: 42px;
+	height: 70px;
+	width: 120px;
+	text-align: center;
+	top: 100px;
+	line-height: 70px;
+}
+#login-reg{
+	position: absolute;
+	left: 200px;
+	font-family: cxh;
+	font-weight: bold;
+	font-size: 42px;
+	height: 70px;
+	width: 120px;
+	text-align: center;
+	top: 100px;
+	line-height: 70px;
+	color: #ff9427;
+}
+
+.input-t-p{
+	position: absolute;
+	padding: 30px 80px;
+	top: 200px;
+}
+.input-t-p input{
+	left: 50px;
+	width: 100%;
+    height: 50px;
+	border:1px solid #787878;
+	background: #F1F1F1;
+}
+.but-sub{
+	position: absolute;
+	border-radius: 15px;
+	background-color:rgb(64,149,215);
+	width: 256px;
+	top: 330px;
+	height: 45px;
+	font-family:"Segoe UI";
+	color: white;
+	font-size: 20px;
+}
+
+
+label{
+  position: relative;
+  top: 14px;
+  font-size: 9px;
+  color:#868987;
+  line-height: 16px;
+}
+input[type="radio"]{
+  display: none;
+}
+input[type='radio']+label:before{
+  margin-top: -2px;
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  border-radius: 100%;
+  vertical-align: middle;
+  border: 1px solid #E4E4E4;
+  background: #FFFFFF;
+}
+
+input[type='radio']:checked+label:before {
+	background-image: url('../image/background.jpg');
+	background-position: center center;
+
+}
