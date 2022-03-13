@@ -65,29 +65,16 @@ body{
 	border-radius: 4px;
 	box-shadow: 0 0 8px rgb(0 0 0 / 10%);
 }
-#login-login{
+#upload{
 	position: absolute;
-	border-right: 1px solid black;
-	left: 80px;
+	left: 140px;
 	font-family: cxh;
 	font-weight: bold;
 	font-size: 42px;
 	height: 70px;
 	width: 120px;
 	text-align: center;
-	top: 100px;
-	line-height: 70px;
-}
-#login-reg{
-	position: absolute;
-	left: 200px;
-	font-family: cxh;
-	font-weight: bold;
-	font-size: 42px;
-	height: 70px;
-	width: 120px;
-	text-align: center;
-	top: 100px;
+	top: 50px;
 	line-height: 70px;
 	color: #ff9427;
 }
@@ -95,7 +82,7 @@ body{
 .input-t-p{
 	position: absolute;
 	padding: 30px 80px;
-	top: 200px;
+	top: 100px;
 }
 .input-t-p input{
 	left: 50px;
@@ -109,38 +96,16 @@ body{
 	border-radius: 15px;
 	background-color:rgb(64,149,215);
 	width: 256px;
-	top: 330px;
+	top: 380px;
 	height: 45px;
 	font-family:"Segoe UI";
 	color: white;
 	font-size: 20px;
 }
-
-
-label{
-  position: relative;
-  top: 14px;
-  font-size: 9px;
-  color:#868987;
-  line-height: 16px;
-}
-input[type="radio"]{
-  display: none;
-}
-input[type='radio']+label:before{
-  margin-top: -2px;
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
-  border-radius: 100%;
-  vertical-align: middle;
-  border: 1px solid #E4E4E4;
-  background: #FFFFFF;
+#uploadfile{
+	text-align: center;
+	border:0px;
+	background: white;
 }
 
-input[type='radio']:checked+label:before {
-	background-image: url('../image/background.jpg');
-	background-position: center center;
-}
+

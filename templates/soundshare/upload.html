@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static "js/changeInput.js" %}"></script>
+<link rel="stylesheet" href="{% static "css/upload.css" %}">
+    <head>
+        <title>Upload</title>
+    </head>
+    <body>
+        <div id="login">
+            <div id="logo" onclick="javascript:document.getElementById('03').click()">
+                <img id="logo3"  alt="logo" src="{% static "image/Soundshare.png" %}" >
+                <a id="03" href="/soundshare/"></a>
+            </div>
+            <div id="mid">
+                <div id="pic">
+                    <img id="pic1" src="{% static "image/pic3.png" %}">
+                </div>
+                <div id="ls">
+                    <div id="upload">
+                        Upload
+                    </div>
+                    <div class="input-t-p">
+                        <form action="" method="post">
+                            <label><input type="text" required="required" placeholder="Music of name" name="musicname"></label>
+                            <label><input type="text" required="required" placeholder="Link" name="link"></label>
+                            <label><input type="text" required="required" placeholder="Name of Musician" name="musicianname"></label>
+                            <label><input type="text" required="required" placeholder="Name of album" name="album"></label>
+                            <label><input type="text" required="required" id="uploadreason" placeholder="Reasons for sharing" name="reason"></label>
+                            <label><input id="uploadfile" type="file"  name="file"></label>
+                        </form>
+                        <button class="but-sub" type="submit">Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
