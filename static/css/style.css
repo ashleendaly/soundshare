@@ -130,6 +130,9 @@ div{
 	opacity: 0.5;
 	z-index: 1000;
 }
+.musicpage:hover{
+	background-color: #333333;
+}
 .banner .background .arrows .picture #navdiv a:hover{
 	background: #000000;
 }
