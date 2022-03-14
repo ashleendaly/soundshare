@@ -666,32 +666,53 @@ button {
 	margin: 0 auto;
 	text-align: center;
 }
+#sear1{
+	margin: 0 auto;
+	text-align:center;
+	position: relative;
+	vertical-align:middle;
+	height: 40px;
+	width: 350px;
+}
+#sear{
+	height: 40px;
+	border-radius: 15px;
+	width: 350px;
+}
+#but2{
 
-
-
-
-
-/* Set the style of the username and password input */
-.box input[type="text"],.box input[type="password"]{
-	margin: auto;
-	border-radius: 10% / 50%;
-	height: 200px;
-	width: 500px;
-	padding: 70px 0;
-	;
+}
+#form2{
+	position: relative;
+	height: 40px;
+	border-radius: 15px;
+	width: 350px;
+	top: 20px;
+}
+#but{
+	background-color: white;
+	position: absolute;
+	left: 817px;
+	top: 42px;
+	border: 1px solid black;
+}
+#but2{
+	position: relative;
+	border: 1px solid black;
+	border-radius: 15px;
+	height: 40px;
+	width: 17%;
+	top: -40px;
+	right: -145px;
 }
 
-/* Sets the style of the textbox when it gets focus */
-.box input[type="text"]:focus,.box input[type="password"]:focus {
-	border-color: #2ecc71;
+#but:hover{
+	background-color: cadetblue;
+	min-height: 1500px;
 }
-
-/* Set the  style of the submit button*/
-.box input[type="submit"]{
-	cursor: pointer;
+#but2:hover{
+	background-color: cadetblue;
 }
-
-/* Set the mouseover style on the button*/
-.box input[type="submit"]:hover{
-    background: #2ecc71;
+#form1{
+	position: relative;
 }

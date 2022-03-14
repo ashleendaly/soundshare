@@ -20,3 +20,8 @@ def signup(request):
 def upload(request):
     context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
     return render(request, 'soundshare/upload.html', context=context_dict)
+
+
+def music(request):
+    context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
+    return render(request, 'soundshare/music.html', context=context_dict)

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html xmlns="http://www.w3.org/1999/html">
+<html>
     <head>
 		<link rel="stylesheet" href="{% static "css/style.css" %}" >
 		<script type="text/javascript" src="{% static "js/movetool.js" %}"></script>
@@ -15,7 +15,7 @@
 				<ul class="guide">
 					<li class="logo" ><img class="logopic" alt="logo" src="{% static "image/Soundshare.png" %}"></li>
 					<li onclick="javascript:document.getElementById('01').click()" class="choose">Index<a id="01" href="/soundshare/"></a></li>
-					<li class="l1">Music</li>
+					<li onclick="javascript:document.getElementById('07').click()" class="musicpage" class="l1">Music<a id="07" href="/soundshare/music/"></a></li>
 					<li onclick="javascript:document.getElementById('06').click()" class="l2">Upload<a id="06" href="/soundshare/upload/"></a></li>
 					<li class="ser"><input type="search" placeholder="Music/Musician"></li>
 					<li onclick="javascript:document.getElementById('02').click()" class="login">Login<a id="02" href="/soundshare/login/"></a></li>
