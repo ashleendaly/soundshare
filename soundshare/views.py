@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from soundshare.models import UserProfile, Song
+from soundshare.models import UserProfile, Song, Album, Feedback
 from soundshare.forms import UserForm, UserProfileForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout

@@ -49,7 +49,7 @@ class Album(models.Model):
 
 class Feedback(models.Model):
     rating = models.IntegerField(default=0)
-    username = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     comment = models.CharField(max_length=10000)
     song = models.ForeignKey(Song, on_delete=models.CASCADE)
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
