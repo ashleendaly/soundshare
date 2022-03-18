@@ -80,7 +80,7 @@ div{
 }
 .nav .top .guide .login{
 	display: block;
-    font-size: 8px;
+    font-size: 15px;
     color: #787878;
 }
 
@@ -273,117 +273,7 @@ button {
 	float: left;
 	width: 130px;
 	height: 130px;
-	border:1px solid #000;
-}
-
-.square .secondline{
-	position: absolute;
-	top: 299px;
-	height: 214px;
-	width: 100%;
-}
-.square .secondline .square1234{
-	margin: 0 auto;
-	width: 650px;
-	height: 214px;
-	padding: 0px;
-	list-style:none;
-}
-.square .secondline .square1234 li{
-	list-style: none;
-	margin: 41px 15px;
-	float: left;
-	width: 130px;
-	height: 130px;
-	border:1px solid #000;
-}
-#sn1{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left: 15px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn2{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left: 178px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn3{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left:340px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn4{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left: 502px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn5{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left: 15px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn6{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left: 178px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn7{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left:340px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
-}
-#sn8{
-	position: absolute;
-	max-height: 41px;
-	max-width: 130px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	left: 502px;
-	bottom: 20px;
-	font-family: cxh;
-	font-weight: bold;
+	text-align: center;
 }
 
 .square2{
@@ -464,7 +354,6 @@ button {
 	top: 80px;
 	height: 214px;
 	width: 100%;
-
 }
 .square2 .firstline .square1234{
 	margin: 0 auto;
@@ -479,7 +368,11 @@ button {
 	float: left;
 	width: 130px;
 	height: 130px;
-	border:1px solid #000;
+}
+
+.square1234 li video {
+	width: 130px;
+	height: 130px;
 }
 
 .square2 .secondline{
@@ -501,8 +394,9 @@ button {
 	float: left;
 	width: 130px;
 	height: 130px;
-	border:1px solid #000;
+	text-align: center;
 }
+
 #se1{
 	position: absolute;
 	max-height: 41px;
@@ -718,4 +612,11 @@ button {
 }
 #form1{
 	position: relative;
+}
+
+#before_login {
+    margin-left: 600px;
+	display: block;
+    font-size: 15px;
+    color: #787878;
 }

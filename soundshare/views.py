@@ -18,7 +18,7 @@ def index(request):
         return render(request, 'soundshare/index.html', context=context_dict)
 
 
-def login(request):
+def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -27,7 +27,7 @@ def login(request):
         print(user)
         if user:
             if user.is_active:
-                # login(request, user)
+                login(request, user)
                 return redirect(reverse('index'))
             else:
                 return HttpResponse('The soundshare account ' + username + 'is disabled!')
