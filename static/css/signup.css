@@ -109,7 +109,8 @@ body{
 	border-radius: 15px;
 	background-color:rgb(64,149,215);
 	width: 256px;
-	top: 330px;
+	top: 350px;
+	left: 80px;
 	height: 45px;
 	font-family:"Segoe UI";
 	color: white;

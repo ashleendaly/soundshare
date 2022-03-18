@@ -25,14 +25,16 @@
                         <a id="05" href="/soundshare/signup/"></a>
                     </div>
                     <div class="input-t-p">
-                        <form action="" method="post">
-                            <label><input type="text" required="required" placeholder="Username" name="u"></label>
-                            <label><input type="password" required="required" placeholder="Password" name="p"></label>
+                        <form id="login_form" method="post" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <label><input type="text" required="required" placeholder="Username" name="username"></label>
+                            <label><input type="password" required="required" placeholder="Password" name="password"></label>
+
+                            <button class="but-sub" type="submit">Sign in</button>
                         </form>
                         <div id="forgetpss">
                             Forget Password
                         </div>
-                        <button class="but-sub" type="submit">Sign in</button>
                     </div>
                 </div>
             </div>

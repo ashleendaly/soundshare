@@ -25,19 +25,23 @@
                         <a id="05" href="/soundshare/signup/"></a>
                     </div>
                     <div class="input-t-p">
-                        <form action="" method="post">
-                            <label><input type="text" required="required" placeholder="Username" name="u"></label>
-                            <label><input type="text" required="required" placeholder="Email" name="e"></label>
-                            <label><input type="text" required="required" placeholder="Name" name="n"></label>
-                            <label><input type="password" required="required" placeholder="Password" name="p"></label>
+                        <form id="signup_form" method="post" action="{% url 'signup' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <label><input type="text" required="required" placeholder="Username" name="username"></label>
+                            <label><input type="password" required="required" placeholder="Password" name="password"></label>
+                            <label><input type="text" required="required" placeholder="Email" name="email"></label>
+                            <label><input type="text" required="required" placeholder="FirstName" name="firstname"></label>
+                            <label><input type="text" required="required" placeholder="LastName" name="lastname"></label>
+
                             <input type="radio" name="type" value="Creater" id="Creater">
                             <label for="Creater">Creater</label>
                             <input type="radio" name="type" value="Listener" id="Listener">
                             <label for="Listener">Listener</label>
                             <input type="radio" name="type" value="Producer" id="Producer">
                             <label for="Producer">Producer</label>
+
+                            <button class="but-sub" type="submit">Sign up</button>
                         </form>
-                        <button class="but-sub" type="submit">Sign up</button>
                     </div>
                 </div>
             </div>
