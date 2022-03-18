@@ -1,35 +1,44 @@
-<!DOCTYPE html>
+{% extends 'soundshare/base.html' %}
 {% load staticfiles %}
-<html>
-    <head>
-		<link rel="stylesheet" href="{% static "css/style.css" %}" >
-		<script type="text/javascript" src="{% static "js/movetool.js" %}"></script>
-		<script type="text/javascript" src="{% static "js/scr.js" %}"></script>
-        <title>Music</title>
-    </head>
-    <body>
-		<!--------Guide Page----------->
-		<div class="nav">
-			<div class="top">
-				<ul class="guide">
-					<li class="logo" ><img class="logopic" alt="logo" src="{% static "image/Soundshare.png" %}"></li>
-					<li onclick="javascript:document.getElementById('01').click()" class="choose">Index<a id="01" href="/soundshare/index/"></a></li>
-					<li onclick="javascript:document.getElementById('07').click()" class="musicpage" class="l1">Music<a id="07" href="/soundshare/music/"></a></li>
-					<li onclick="javascript:document.getElementById('06').click()" class="l2">Upload<a id="06" href="/soundshare/upload/"></a></li>
-					<form method="post" id="form1"><li class="ser"><input type="search" placeholder="Music/Musician"></li>
-                        <button value="Search" id="but">Search</button>
-                    </form>
-					<li onclick="javascript:document.getElementById('02').click()" class="login">Login<a id="02" href="/soundshare/login/"></a></li>
-				</ul>
-			</div>
+
+{% block title_block %}
+	Music
+{% endblock %}
+
+{% block body_block %}
+	<div id="background-music">
+		<div id="sear1">
+			<form method="post" id="form2"><input type="search" placeholder="Music/Musician" id="sear">
+				<button id="but2">Search</button>
+			</form>
 		</div>
-        <!--------Guide Page----------->
-        <div id="background-music">
-            <div id="sear1">
-                <form method="post" id="form2"><input type="search" placeholder="Music/Musician" id="sear">
-                    <button id="but2">Search</button>
-                </form>
-            </div>
-        </div>
-    </body>
-</html>
+		<div id="music_info">
+			{% if music_info %}
+			<h1> {{ music_info.title }} </h1>
+			<div id="detail_info">
+				<p> Name of Musician: {{ music_info. }}</p>
+				<p> Name of Album: {{ music_info.album_title }}</p>
+				<p> Link to play: {{ music_info.link }} </p>
+				<p> Likes: {{ music_info.likes }} </p>
+				<p> Views: {{ music_info.views }} </p>
+				<p> Grades: {{ music_info.creator }} </p>
+				<p> Rating: {{ music_info.average_rating }} </p>
+			</div>
+
+			<hr />
+
+			<h2> Comment </h2>
+			<div id="comment">
+				<div id="new_comment">
+					<h3>New Comment: </h3> <input />
+				</div>
+				<hr />
+				<div id="previous_comments">
+					<h3>Previous Comments: </h3> <input />
+				</div>
+			</div>
+			{% endif %}
+		</div>
+
+	</div>
+{% endblock %}

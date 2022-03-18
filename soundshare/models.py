@@ -23,13 +23,13 @@ class UserProfile(models.Model):
 
 
 class Song(models.Model):
+    title = models.CharField(max_length=64, unique=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     creator = models.ManyToManyField(UserProfile)
     average_rating = models.IntegerField(default=0)
     album_title = models.CharField(max_length=64)
     link = models.URLField(unique=True)
-    title = models.CharField(max_length=64)
 
     def __str__(self):
         return self.title

@@ -19,5 +19,5 @@ urlpatterns = [
                   path('index/', views.index, name='index'),
                   path('signup/', views.signup, name='signup'),
                   path('upload/', views.upload, name='upload'),
-                  path('music/', views.music, name='music'),
+                  path('music/<str:music_title>/', views.music, name='music'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

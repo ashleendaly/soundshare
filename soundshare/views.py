@@ -8,8 +8,14 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
-    return render(request, 'soundshare/index.html', context=context_dict)
+    context_dict = {}
+    try:
+        all_music = Song.objects.all()
+        context_dict = {'all_music': all_music}
+        return render(request, 'soundshare/index.html', context=context_dict)
+    except Song.DoesNotExist:
+        print("No song exists!")
+        return render(request, 'soundshare/index.html', context=context_dict)
 
 
 def login(request):
@@ -60,11 +66,19 @@ def signup(request):
         return render(request, 'soundshare/signup.html', context=context_dict)
 
 
+def music(request, music_title):
+    context_dict = {}
+    try:
+        music_info = Song.objects.get(title=music_title)
+        context_dict = {'music_info': music_info}
+        return render(request, 'soundshare/music.html', context=context_dict)
+    except Song.DoesNotExist:
+        print("The song is not exist!")
+        return render(request, 'soundshare/music.html', context=context_dict)
+
+
+
 def upload(request):
     context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
     return render(request, 'soundshare/upload.html', context=context_dict)
 
-
-def music(request):
-    context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
-    return render(request, 'soundshare/music.html', context=context_dict)

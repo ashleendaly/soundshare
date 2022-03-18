@@ -1,210 +1,202 @@
-<!DOCTYPE html>
+{% extends 'soundshare/base.html' %}
 {% load staticfiles %}
-<html>
-    <head>
-		<link rel="stylesheet" href="{% static "css/style.css" %}" >
-		<script type="text/javascript" src="{% static "js/movetool.js" %}"></script>
-		<script type="text/javascript" src="{% static "js/scr.js" %}"></script>
 
-        <title>Index</title>
-    </head>
-    <body>
-		<!--------Guide Page----------->
-		<div class="nav">
-			<div class="top">
-				<ul class="guide">
-					<li class="logo" ><img class="logopic" alt="logo" src="{% static "image/Soundshare.png" %}"></li>
-					<li onclick="javascript:document.getElementById('01').click()" class="choose">Index<a id="01" href="/soundshare/index/"></a></li>
-					<li onclick="javascript:document.getElementById('07').click()" class="musicpage" class="l1">Music<a id="07" href="/soundshare/music/"></a></li>
-					<li onclick="javascript:document.getElementById('06').click()" class="l2">Upload<a id="06" href="/soundshare/upload/"></a></li>
-					<li class="ser"><input type="search" placeholder="Music/Musician"></li>
-					<li onclick="javascript:document.getElementById('02').click()" class="login">Login<a id="02" href="/soundshare/login/"></a></li>
-				</ul>
-			</div>
-		</div>
-		<!--------Banner----------->
-		<div class="banner">
-			<div class="background">
-				<div class="arrows">
-					<div class="picture">
-						<ul class="outer">
-							<li>
-								<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
-							</li>
-							<li>
-								<img class="pic1" src="{% static "image/banner2.png" %}" alt="test2">
-							</li>
-							<li>
-								<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
-							</li>
-						</ul>
-						<div id="navdiv">
-							<a class="a1" href="javascript:;"></a>
-							<a class="a1" href="javascript:;"></a>
+{% block title_block %}
+	Index
+{% endblock %}
+
+{% block body_block %}
+<!--------Index----------->
+<h1>All music</h1>
+{% if all_music %}
+	<ul>
+		{% for music in all_music %}
+		<li>
+			<a href="{% url 'music' music.title %}">{{ music.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+
+	<div class="banner">
+		<div class="background">
+			<div class="arrows">
+				<div class="pdicture">
+					<ul class="outer">
+						<li>
+							<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
+						</li>
+						<li>
+							<img class="pic1" src="{% static "image/banner2.png" %}" alt="test2">
+						</li>
+						<li>
+							<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
+						</li>
+					</ul>
+					<div id="navdiv">
+						<a class="a1" href="javascript:;"></a>
+						<a class="a1" href="javascript:;"></a>
+					</div>
+				</div>
+				<div class="music">
+					<div class="music-left">
+						<div class="part1">
+							<div>
+								<img class="logo2" src="{% static "image/ab0e1c8447f5a00d6bffcd051783b1be.png" %}">
+								<div id="word1">Most views</div>
+								<div id="word2">Blue</div>
+								<div id="word3">Jazz</div>
+								<div id="word4">Classic</div>
+								<div id="word5">Pop</div>
+								<div id="word6">MORE→</div>
+							</div>
+							<div>
+								<img class="fg1" src="{% static "image/0bbb8c89ff4a91b7e8e7573612c9f12.png" %}">
+							</div>
+							<div class="square">
+								<div class="firstline">
+									<ul class="square1234">
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+									</ul>
+									<div id="sn1">
+										songname
+									</div>
+									<div id="sn2">
+										songname
+									</div>
+									<div id="sn3">
+										songname
+									</div>
+									<div id="sn4">
+										songname
+									</div>
+								</div>
+
+								<div class="secondline">
+									<ul class="square1234">
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+									</ul>
+									<div id="sn5">
+										songname
+									</div>
+									<div id="sn6">
+										songname
+									</div>
+									<div id="sn7">
+										songname
+									</div>
+									<div id="sn8">
+										songname
+									</div>
+								</div>
+							</div>
+							<div class="square2">
+								<div>
+									<img id="logo2" src="{% static "image/ab0e1c8447f5a00d6bffcd051783b1be.png" %}">
+									<div id="w1">Most likes</div>
+									<div id="w2">Blue</div>
+									<div id="w3">Jazz</div>
+									<div id="w4">Classic</div>
+									<div id="w5">Pop</div>
+									<div id="w6">MORE→</div>
+								</div>
+								<div>
+									<img class="fg1" src="{% static "image/b79d5e8f45b28f3a9f75ae21f9a29d5.png" %}">
+								</div>
+								<div class="firstline">
+									<ul class="square1234">
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+									</ul>
+									<div id="se1">
+										songname
+									</div>
+									<div id="se2">
+										songname
+									</div>
+									<div id="se3">
+										songname
+									</div>
+									<div id="se4">
+										songname
+									</div>
+								</div>
+								<div class="secondline">
+									<ul class="square1234">
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+										<li> s1</li>
+									</ul>
+									<div id="se5">
+										songname
+									</div>
+									<div id="se6">
+										songname
+									</div>
+									<div id="se7">
+										songname
+									</div>
+									<div id="se8">
+										songname
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="music">
-						<div class="music-left">
-							<div class="part1">
-								<div>
-									<img class="logo2" src="{% static "image/ab0e1c8447f5a00d6bffcd051783b1be.png" %}">
-									<div id="word1">Most views</div>
-									<div id="word2">Blue</div>
-									<div id="word3">Jazz</div>
-									<div id="word4">Classic</div>
-									<div id="word5">Pop</div>
-									<div id="word6">MORE→</div>
-								</div>
-								<div>
-									<img class="fg1" src="{% static "image/0bbb8c89ff4a91b7e8e7573612c9f12.png" %}">
-								</div>
-								<div class="square">
-									<div class="firstline">
-										<ul class="square1234">
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-										</ul>
-										<div id="sn1">
-											songname
-										</div>
-										<div id="sn2">
-											songname
-										</div>
-										<div id="sn3">
-											songname
-										</div>
-										<div id="sn4">
-											songname
-										</div>
-									</div>
-
-									<div class="secondline">
-										<ul class="square1234">
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-										</ul>
-										<div id="sn5">
-											songname
-										</div>
-										<div id="sn6">
-											songname
-										</div>
-										<div id="sn7">
-											songname
-										</div>
-										<div id="sn8">
-											songname
-										</div>
-									</div>
-								</div>
-								<div class="square2">
-									<div>
-										<img id="logo2" src="{% static "image/ab0e1c8447f5a00d6bffcd051783b1be.png" %}">
-										<div id="w1">Most likes</div>
-										<div id="w2">Blue</div>
-										<div id="w3">Jazz</div>
-										<div id="w4">Classic</div>
-										<div id="w5">Pop</div>
-										<div id="w6">MORE→</div>
-									</div>
-									<div>
-										<img class="fg1" src="{% static "image/b79d5e8f45b28f3a9f75ae21f9a29d5.png" %}">
-									</div>
-									<div class="firstline">
-										<ul class="square1234">
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-										</ul>
-										<div id="se1">
-											songname
-										</div>
-										<div id="se2">
-											songname
-										</div>
-										<div id="se3">
-											songname
-										</div>
-										<div id="se4">
-											songname
-										</div>
-									</div>
-									<div class="secondline">
-										<ul class="square1234">
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-											<li> s1</li>
-										</ul>
-										<div id="se5">
-											songname
-										</div>
-										<div id="se6">
-											songname
-										</div>
-										<div id="se7">
-											songname
-										</div>
-										<div id="se8">
-											songname
-										</div>
-									</div>
+					<div class="music-right">
+						<div id="singer">
+							Musician-Join us
+						</div>
+						<div id="singer1">
+							<div class="singer-pic">
+								<div class="singer-name">
+									Singername
 								</div>
 							</div>
 						</div>
-						<div class="music-right">
-							<div id="singer">
-								Musician-Join us
-							</div>
-							<div id="singer1">
-								<div class="singer-pic">
-									<div class="singer-name">
-										Singername
-									</div>
+						<div id="singer2">
+							<div class="singer-pic">
+								<div class="singer-name">
+									Singername
 								</div>
 							</div>
-							<div id="singer2">
-								<div class="singer-pic">
-									<div class="singer-name">
-										Singername
-									</div>
+						</div>
+						<div id="singer3">
+							<div class="singer-pic">
+								<div class="singer-name">
+									Singername
 								</div>
 							</div>
-							<div id="singer3">
-								<div class="singer-pic">
-									<div class="singer-name">
-										Singername
-									</div>
+						</div>
+						<div id="singer4">
+							<div class="singer-pic">
+								<div class="singer-name">
+									Singername
 								</div>
 							</div>
-							<div id="singer4">
-								<div class="singer-pic">
-									<div class="singer-name">
-										Singername
-									</div>
+						</div>
+						<div id="singer5">
+							<div class="singer-pic">
+								<div class="singer-name">
+									Singername
 								</div>
 							</div>
-							<div id="singer5">
-								<div class="singer-pic">
-									<div class="singer-name">
-										Singername
-									</div>
-								</div>
-							</div>
-							<div id="checkmore">
-								MORE→
-							</div>
+						</div>
+						<div id="checkmore">
+							MORE→
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--------Music----------->
-
-    </body>
-</html>
+	</div>
+{% endblock %}
