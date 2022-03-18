@@ -35,3 +35,26 @@ class Song(models.Model):
         return self.title
 
 
+class Album(models.Model):
+    title = models.CharField(max_length=64, unique=True)
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+    creator = models.ManyToManyField(UserProfile)
+    average_rating = models.IntegerField(default=0)
+    link = models.URLField(unique=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Feedback(models.Model):
+    rating = models.IntegerField(default=0)
+    username = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    comment = models.CharField(max_length=10000)
+    song = models.ForeignKey(Song, on_delete=models.CASCADE)
+    album = models.ForeignKey(Album, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return (self.username, self.rating)
+
+
