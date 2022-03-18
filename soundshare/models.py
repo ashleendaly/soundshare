@@ -1,3 +1,5 @@
+import time
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -57,4 +59,13 @@ class Feedback(models.Model):
     def __str__(self):
         return (self.username, self.rating)
 
+
+class Comment(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    song = models.OneToOneField(Song, on_delete=models.CASCADE)
+    content = models.CharField(max_length=512, blank=False)
+    comment_time = models.TimeField(blank=False)
+
+    def __str__(self):
+        return self.song.title
 

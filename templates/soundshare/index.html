@@ -1,36 +1,30 @@
 {% extends 'soundshare/base.html' %}
 {% load staticfiles %}
 
+{% block script_block %}
+<script type="text/javascript" src="{% static 'js/movetool.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/scr.js' %}"></script>
+{% endblock %}
+
 {% block title_block %}
 	Index
 {% endblock %}
 
 {% block body_block %}
 <!--------Index----------->
-<h1>All music</h1>
-{% if all_music %}
-	<ul>
-		{% for music in all_music %}
-		<li>
-			<a href="{% url 'music' music.title %}">{{ music.title }}</a>
-		</li>
-		{% endfor %}
-	</ul>
-{% endif %}
-
 	<div class="banner">
 		<div class="background">
 			<div class="arrows">
-				<div class="pdicture">
+				<div class="picture">
 					<ul class="outer">
 						<li>
-							<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
+							<img class="pic1" src="{% static 'image/banner1.png' %}" alt="test1">
 						</li>
 						<li>
-							<img class="pic1" src="{% static "image/banner2.png" %}" alt="test2">
+							<img class="pic1" src="{% static 'image/banner2.png' %}" alt="test2">
 						</li>
 						<li>
-							<img class="pic1" src="{% static "image/banner1.png" %}" alt="test1">
+							<img class="pic1" src="{% static 'image/banner1.png' %}" alt="test1">
 						</li>
 					</ul>
 					<div id="navdiv">
@@ -42,7 +36,7 @@
 					<div class="music-left">
 						<div class="part1">
 							<div>
-								<img class="logo2" src="{% static "image/ab0e1c8447f5a00d6bffcd051783b1be.png" %}">
+								<img class="logo2" src="{% static 'image/ab0e1c8447f5a00d6bffcd051783b1be.png' %}">
 								<div id="word1">Most views</div>
 								<div id="word2">Blue</div>
 								<div id="word3">Jazz</div>
@@ -51,49 +45,21 @@
 								<div id="word6">MORE→</div>
 							</div>
 							<div>
-								<img class="fg1" src="{% static "image/0bbb8c89ff4a91b7e8e7573612c9f12.png" %}">
+								<img class="fg1" src="{% static 'image/0bbb8c89ff4a91b7e8e7573612c9f12.png' %}">
 							</div>
 							<div class="square">
 								<div class="firstline">
-									<ul class="square1234">
-										<li> s1</li>
-										<li> s1</li>
-										<li> s1</li>
-										<li> s1</li>
-									</ul>
-									<div id="sn1">
-										songname
-									</div>
-									<div id="sn2">
-										songname
-									</div>
-									<div id="sn3">
-										songname
-									</div>
-									<div id="sn4">
-										songname
-									</div>
-								</div>
-
-								<div class="secondline">
-									<ul class="square1234">
-										<li> s1</li>
-										<li> s1</li>
-										<li> s1</li>
-										<li> s1</li>
-									</ul>
-									<div id="sn5">
-										songname
-									</div>
-									<div id="sn6">
-										songname
-									</div>
-									<div id="sn7">
-										songname
-									</div>
-									<div id="sn8">
-										songname
-									</div>
+									{% if all_music %}
+										<ul class="square1234">
+											{% for music in all_music %}
+											<li>
+<!--												<iframe width="150" height="150" src="{{ music.link }}"></iframe>-->
+												<iframe width="150" height="150" src="https://www.youtube.com/embed/ym9MpAz5PNI"></iframe>
+												<a href="{% url 'music' music.title %}">{{ music.title }}</a>
+											</li>
+											{% endfor %}
+										</ul>
+									{% endif %}
 								</div>
 							</div>
 							<div class="square2">
