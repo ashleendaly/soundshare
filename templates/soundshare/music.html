@@ -8,7 +8,9 @@
 {% block body_block %}
 	<div id="background-music">
 		<div id="sear1">
-			<form method="post" id="form2"><input type="search" placeholder="Music/Musician" id="sear">
+			<form id="search_form" method="post" action="{% url 'music_search' %}">
+				{% csrf_token %}
+				<input type="search" placeholder="Music/Musician" id="sear" name="search_music_musician">
 				<button id="but2">Search</button>
 			</form>
 		</div>
@@ -18,7 +20,7 @@
 			<div id="detail_info">
 				<p> Name of Musician: {{ music_info. }}</p>
 				<p> Name of Album: {{ music_info.album_title }}</p>
-				<p> Link to play: {{ music_info.link }} </p>
+				<p> Link to play: <a href="{{ music_info.link }}">{{ music_info.link }}</a> </p>
 				<p> Likes: {{ music_info.likes }} </p>
 				<p> Views: {{ music_info.views }} </p>
 				<p> Grades: {{ music_info.creator }} </p>
@@ -37,6 +39,29 @@
 					<h3>Previous Comments: </h3> <input />
 				</div>
 			</div>
+			{% elif all_music %}
+				<div id="all_music">
+					<h1>All Music</h1>
+					<ul class="square1234">
+						{% for music in all_music %}
+						<li>
+							<a href="{% url 'music' music.title %}">{{ music.title }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+
+			{% elif selected_music %}
+				<div id="selected_music">
+					<h1>Selected Music</h1>
+					<ul class="square1234">
+						{% for music in selected_music %}
+						<li>
+							<a href="{% url 'music' music.title %}">{{ music.title }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
 			{% endif %}
 		</div>
 

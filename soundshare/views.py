@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from soundshare.models import UserProfile, Song, Album, Feedback
-from soundshare.forms import UserForm, UserProfileForm
+from soundshare.forms import UserForm, UserProfileForm, SongForm, SearchForm
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -41,7 +41,6 @@ def user_login(request):
 
 
 def signup(request):
-    registered = False
     if request.method == 'POST':
         user_form = UserForm(request.POST)
         profile_form = UserProfileForm(request.POST)
@@ -52,7 +51,6 @@ def signup(request):
             profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
-            registered = True
             return redirect(reverse('login'))
         else:
             print(f'Invalid signup details: user fomr error: {user_form.errors}, profile form error: {profile_form.errors}')
@@ -77,8 +75,52 @@ def music(request, music_title):
         return render(request, 'soundshare/music.html', context=context_dict)
 
 
+def music_all(request):
+    context_dict = {}
+    try:
+        all_music = Song.objects.all()
+        context_dict = {'all_music': all_music}
+        return render(request, 'soundshare/music.html', context=context_dict)
+    except Song.DoesNotExist:
+        print("The song is not exist!")
+        return render(request, 'soundshare/music.html', context=context_dict)
 
-def upload(request):
+
+def music_search(request):
+    context_dict = {}
+    if request.method == 'POST':
+        search_music_musician = request.POST.get('search_music_musician')
+        print(f'search_music_musician is {search_music_musician}')
+        try:
+            all_music = Song.objects.all()
+            selected_music = []
+            for music in all_music:
+                if music.title == search_music_musician or music.musician_name == search_music_musician:
+                    selected_music.append(music)
+
+            context_dict = {'selected_music': selected_music}
+            return render(request, 'soundshare/music.html', context=context_dict)
+        except Song.DoesNotExist:
+            print("The song is not exist!")
+            return render(request, 'soundshare/music.html', context=context_dict)
+
     context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
-    return render(request, 'soundshare/upload.html', context=context_dict)
+    return render(request, 'soundshare/music.html', context=context_dict)
+
+
+def upload_music(request):
+    if request.method == 'POST':
+        song_form = SongForm(request.POST)
+        if song_form.is_valid():
+            song = song_form.save(commit=False)
+            # song.creator = request.user
+            song.save()
+            return redirect(reverse('index'))
+        else:
+            print(f'Invalid signup details: song fomr error: {song_form.errors}')
+            return HttpResponse('Invalid signup details supplied! Invalid signup details: user form error: '+ str(song_form.errors))
+    else:
+        song_form = SongForm()
+        context_dict = {'boldmessage': "SoundShare - The Web App to Share and Rate Music!"}
+        return render(request, 'soundshare/upload.html', context=context_dict)
 

@@ -161,6 +161,7 @@ button {
 	border: 1px solid #d3d3d3;
 	border-width: 0 1px;
 	z-index: 0;
+	top: 20px;
 }
 .banner .background .arrows .music .music-left{
 	position: absolute;
@@ -183,7 +184,7 @@ button {
 	position: absolute;
 	width: 100%;
 	height: 75px;
-	top: 30px;
+	top: 40px;
 }
 .banner .background .arrows .music .music-left #word1{
 	height: 40px;
@@ -563,22 +564,7 @@ button {
 	margin: 0 auto;
 	text-align: center;
 }
-#sear1{
-	margin: 0 auto;
-	text-align:center;
-	position: relative;
-	vertical-align:middle;
-	height: 40px;
-	width: 350px;
-}
-#sear{
-	height: 40px;
-	border-radius: 15px;
-	width: 350px;
-}
-#but2{
 
-}
 #form2{
 	position: relative;
 	height: 40px;
@@ -593,15 +579,7 @@ button {
 	top: 42px;
 	border: 1px solid black;
 }
-#but2{
-	position: relative;
-	border: 1px solid black;
-	border-radius: 15px;
-	height: 40px;
-	width: 17%;
-	top: -40px;
-	right: -145px;
-}
+
 
 #but:hover{
 	background-color: cadetblue;

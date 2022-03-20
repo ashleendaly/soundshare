@@ -1,0 +1,42 @@
+#sear1{
+	margin: 0 auto;
+	text-align:center;
+	position: relative;
+	vertical-align:middle;
+	height: 40px;
+	width: 500px;
+}
+
+#sear{
+	height: 40px;
+	border-radius: 15px;
+	width: 500px;
+}
+
+#but2{
+	position: relative;
+	border: 1px solid black;
+	border-radius: 15px;
+	height: 40px;
+	width: 17%;
+	top: -40px;
+	right: -295px;
+}
+
+#music_info {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    height: auto;
+    width: 500px;
+}
+
+#detail_info {
+    text-aligh: left;
+}
+
+#all_music {
+    text-align: center;
+    width: 500px;
+}

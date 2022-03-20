@@ -15,3 +15,18 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('firstname', 'lastname', 'type', 'image', )
+
+
+class SongForm(forms.ModelForm):
+    class Meta:
+        model = Song
+        fields = ('title', 'link', 'musician_name', 'album_title', )
+
+
+class SearchForm(forms.ModelForm):
+    search_music_musician = forms.CharField()
+
+    class Meta:
+        model = Song
+        fields = ('title', 'musician_name', )
+

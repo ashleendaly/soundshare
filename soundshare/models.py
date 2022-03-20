@@ -12,9 +12,6 @@ class UserProfile(models.Model):
         ('Producer', 'Producer'),
     )
 
-    # username_text = models.CharField(max_length=64)
-    # password_text = models.CharField(max_length=64)
-    # email_text = models.CharField(max_length=64)
     firstname = models.CharField(max_length=64, blank=True)
     lastname = models.CharField(max_length=64, blank=True)
     type = models.CharField(max_length=10, choices=USER_TYPE, default='Listener')
@@ -26,12 +23,13 @@ class UserProfile(models.Model):
 
 class Song(models.Model):
     title = models.CharField(max_length=64, unique=True)
+    link = models.URLField(unique=True)
+    musician_name = models.CharField(max_length=64)         # the musician
+    album_title = models.CharField(max_length=64)
+    creator = models.ManyToManyField(User)                  # the user uploaded the music
+    average_rating = models.IntegerField(default=0)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
-    creator = models.ManyToManyField(UserProfile)
-    average_rating = models.IntegerField(default=0)
-    album_title = models.CharField(max_length=64)
-    link = models.URLField(unique=True)
 
     def __str__(self):
         return self.title

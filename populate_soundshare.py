@@ -53,14 +53,14 @@ def populate():
          'creator': 0,
          'average_rating': 4.5,
          'album_title': '',
-         'link': 'https://www.youtube.com/watch?v=vzuY0O1L0b0',
+         'link': 'https://www.youtube.com/embed/2JyW4yAyTl0',
          'title': 'emo girl'},
         {'likes': 6,
          'views': 234,
          'creator': 1,
          'average_rating': 3.5,
          'album_title': '',
-         'link': 'https://www.youtube.com/watch?v=j2p_w409y-o',
+         'link': 'https://www.youtube.com/embed/2JyW4yAyTl0',
          'title': 'In Between'}
     ]
 
