@@ -20,23 +20,7 @@ body{
 	padding: 0;
 	background: #F1F1F1;
 }
-#login{
-	position: relative;
-	height: 100%;
-	width: 100%;
-}
-#logo{
-	position: absolute;
-	top: 50px;
-	left: 70px;
-	width: 200px;
-	height: 88px;
-}
-#logo3{
-	width: 200px;
-	height: 88px;
-}
-#login #mid{
+#mid-1{
 	position: absolute;
 	top: 100px;
 	left: 350px;
@@ -44,28 +28,31 @@ body{
 	height: 600px;
 	margin: 0 auto;
 }
-#pic{
+#pic-1{
 	position: absolute;
 	left: 0;
 	width: 410px;
-	height: 500px;
+	height: 100%;
 }
-#pic #pic1{
-	position: relative;
-	left: 500px;
-	width: 100%;
-	height: 500px;
-}
-#ls{
+#pic-1 #pic1-1{
 	position: absolute;
-	left: 910px;
+	left: 0;
 	width: 410px;
-	height: 500px;
+	height: 100%;
+}
+#ls-1{
+	position: absolute;
+	left: 410px;
+	width: 410px;
+	height: 600px;
 	background: white;
 	border-radius: 4px;
 	box-shadow: 0 0 8px rgb(0 0 0 / 10%);
 }
-#upload{
+
+
+
+#upload-1{
 	position: absolute;
 	left: 140px;
 	font-family: cxh;
@@ -79,24 +66,24 @@ body{
 	color: #ff9427;
 }
 
-.input-t-p{
+.input-t-p-1{
 	position: absolute;
 	padding: 30px 80px;
 	top: 100px;
 }
-.input-t-p input{
+.input-t-p-1 input{
 	left: 50px;
 	width: 100%;
     height: 50px;
 	border:1px solid #787878;
 	background: #F1F1F1;
 }
-.but-sub{
+.but-sub-1{
 	position: absolute;
 	border-radius: 15px;
 	background-color:rgb(64,149,215);
 	width: 256px;
-	top: 280px;
+	top: 310px;
 	left: 80px;
 	height: 45px;
 	font-family:"Segoe UI";

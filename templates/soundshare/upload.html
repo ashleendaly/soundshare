@@ -6,24 +6,24 @@
 {% endblock %}
 
 {% block body_block %}
-    <div id="upload_page">
-        <div id="mid">
-            <div id="pic">
-                <img id="pic1" src="{% static 'image/pic4.jpg' %}">
+    <div id="upload_page-1">
+        <div id="mid-1">
+            <div id="pic-1">
+                <img id="pic1-1" src="{% static 'image/pic4.jpg' %}">
             </div>
-            <div id="ls">
-                <div id="upload">
+            <div id="ls-1">
+                <div id="upload-1">
                     Upload
                 </div>
-                <div class="input-t-p">
-                    <form id="upload_form" method="post" action="{% url 'upload' %}" >
+                <div class="input-t-p-1">
+                    <form id="upload_form-1" method="post" action="{% url 'upload' %}" >
                         {% csrf_token %}
                         <label><input type="text" required="required" placeholder="Music Title" name="title"></label>
                         <label><input type="text" required="required" placeholder="Link" name="link"></label>
                         <label><input type="text" required="required" placeholder="Name of Musician" name="musician_name"></label>
                         <label><input type="text" required="required" placeholder="Name of album" name="album_title"></label>
-<!--                        <label><input id="uploadfile" type="file"  name="file"></label>-->
-                        <button class="but-sub" type="submit">Upload</button>
+                        <label><input id="uploadfile" type="file"  name="file"></label>
+                        <button class="but-sub-1" type="submit">Upload</button>
                     </form>
                 </div>
             </div>
