@@ -53,7 +53,7 @@ def populate():
          'creator': 0,
          'average_rating': 4.5,
          'album_title': '',
-         'link': 'https://www.youtube.com/embed/2JyW4yAyTl0',
+         'link': 'https://www.youtube.com/embed/u1V8YRJnr4Q',
          'title': 'emo girl'},
         {'likes': 6,
          'views': 234,

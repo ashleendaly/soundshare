@@ -22,7 +22,7 @@ class UserProfile(models.Model):
 
 
 class Song(models.Model):
-    title = models.CharField(max_length=64, unique=True)
+    title = models.CharField(max_length=64)
     link = models.URLField(unique=True)
     musician_name = models.CharField(max_length=64)         # the musician
     album_title = models.CharField(max_length=64)
