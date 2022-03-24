@@ -31,6 +31,8 @@ class Song(models.Model):
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
 
+
+
     def __str__(self):
         return self.title
 
@@ -55,15 +57,16 @@ class Feedback(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
 
     def __str__(self):
-        return (self.username, self.rating)
+        return (self.user.username, self.rating)
 
 
 class Comment(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     song = models.OneToOneField(Song, on_delete=models.CASCADE)
-    content = models.CharField(max_length=512, blank=False)
+    content = models.TextField()
     comment_time = models.TimeField(blank=False)
 
     def __str__(self):
-        return self.song.title
+        return self.content
+
 
