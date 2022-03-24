@@ -16,10 +16,12 @@ from django.conf.urls.static import static
 urlpatterns = [
                   path('', views.user_login, name='login'),
                   path('login/', views.user_login, name='login'),
+                  path('logout/', views.user_logout, name='logout'),
                   path('index/', views.index, name='index'),
                   path('signup/', views.signup, name='signup'),
-                  path('upload/', views.upload_music, name='upload'),
+                  path('upload/', views.music_upload, name='upload'),
                   path('music_search/', views.music_search, name='music_search'),
                   path('music/', views.music_all, name='music'),
                   path('music/<str:music_title>/', views.music, name='music'),
+                  path('music/<str:music_title>/add_like/', views.add_like, name='add_like'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

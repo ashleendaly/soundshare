@@ -12,6 +12,7 @@ class UserForm(forms.ModelForm):
 
 
 class UserProfileForm(forms.ModelForm):
+    # image_url = forms.CharField(widget=forms.ImageField())
     class Meta:
         model = UserProfile
         fields = ('firstname', 'lastname', 'type', 'image', )
@@ -20,7 +21,14 @@ class UserProfileForm(forms.ModelForm):
 class SongForm(forms.ModelForm):
     class Meta:
         model = Song
-        fields = ('title', 'link', 'musician_name', 'album_title', )
+        fields = ('title', 'link', 'musician_name', 'album_title', 'image', )
+
+
+class AddLikeForm(forms.ModelForm):
+    music_title = forms.CharField()
+
+    class Meta:
+        fields = ('music_title', )
 
 
 class SearchForm(forms.ModelForm):

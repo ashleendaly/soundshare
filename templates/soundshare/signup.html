@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+{% extends 'soundshare/base.html' %}
 {% load staticfiles %}
-<html>
-<link rel="stylesheet" href="{% static "css/signup.css" %}">
-    <head>
-        <title>Sign up</title>
-    </head>
-    <body>
+
+{% block title_block %}
+	Upload
+{% endblock %}
+
+{% block body_block %}
         <div id="login">
             <div id="logo" onclick="javascript:document.getElementById('03').click()">
-                <img id="logo3"  alt="logo" src="{% static "image/Soundshare.png" %}" >
+                <img id="logo3"  alt="logo" src="{% static 'image/Soundshare.png' %}" >
                 <a id="03" href="/soundshare/"></a>
             </div>
             <div id="mid">
                 <div id="pic">
-                    <img id="pic1" src="{% static "image/pic3.png" %}">
+                    <img id="pic1" src="{% static 'image/pic3.png' %}">
                 </div>
                 <div id="ls">
                     <div id="login-login" onclick="javascript:document.getElementById('04').click()">
@@ -33,8 +33,10 @@
                             <label><input type="text" required="required" placeholder="FirstName" name="firstname"></label>
                             <label><input type="text" required="required" placeholder="LastName" name="lastname"></label>
 
-                            <input type="radio" name="type" value="Creater" id="Creater">
-                            <label for="Creater">Creater</label>
+                            <label><input id="user_image" type="file" name="image"></label>
+
+                            <input type="radio" name="type" value="Creator" id="Creator">
+                            <label for="Creator">Creator</label>
                             <input type="radio" name="type" value="Listener" id="Listener">
                             <label for="Listener">Listener</label>
                             <input type="radio" name="type" value="Producer" id="Producer">
@@ -46,5 +48,4 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+{% endblock %}

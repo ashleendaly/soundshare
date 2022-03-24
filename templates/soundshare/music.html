@@ -18,27 +18,31 @@
 			{% if music_info %}
 			<h1> {{ music_info.title }} </h1>
 			<div id="detail_info">
-				<p> Name of Musician: {{ music_info. }}</p>
+				<p> Name of Musician: {{ music_info.musician_name }}</p>
 				<p> Name of Album: {{ music_info.album_title }}</p>
 				<p> Link to play: <a href="{{ music_info.link }}">{{ music_info.link }}</a> </p>
 				<p> Likes: {{ music_info.likes }} </p>
 				<p> Views: {{ music_info.views }} </p>
-				<p> Grades: {{ music_info.creator }} </p>
 				<p> Rating: {{ music_info.average_rating }} </p>
+				<form id="add_likeform" method="post" action="{% url 'add_like' music_info.title %}" enctype="multipart/form-data">
+					{% csrf_token %}
+					<button type="submit" class="but-like"> Add to like </button>
+				</form>
+				<iframe width="500" height="300" src="{{ music_info.link }}"></iframe>
 			</div>
 
-			<hr />
+<!--			<hr />-->
 
-			<h2> Comment </h2>
-			<div id="comment">
-				<div id="new_comment">
-					<h3>New Comment: </h3> <input />
-				</div>
-				<hr />
-				<div id="previous_comments">
-					<h3>Previous Comments: </h3> <input />
-				</div>
-			</div>
+<!--			<h2> Comment </h2>-->
+<!--			<div id="comment">-->
+<!--				<div id="new_comment">-->
+<!--					<h3>New Comment: </h3> <input />-->
+<!--				</div>-->
+<!--				<hr />-->
+<!--				<div id="previous_comments">-->
+<!--					<h3>Previous Comments: </h3> <input />-->
+<!--				</div>-->
+<!--			</div>-->
 			{% elif all_music %}
 				<div id="all_music">
 					<h1>All Music</h1>

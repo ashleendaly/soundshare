@@ -86,4 +86,3 @@ def test_redirect_if_not_logged_in(self):
         self.assertContains(response, self.md_post.title)
         self.assertIn('post', response.context)
 
-

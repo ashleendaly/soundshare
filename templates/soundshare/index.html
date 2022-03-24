@@ -44,13 +44,20 @@
 								<img class="fg1" src="{% static 'image/fg1.png' %}">
 							</div>
 								<div class="firstline">
-									{% if all_music %}
+									{% if most_views_music %}
 										<ul class="square1234">
-											{% for music in all_music %}
+											{% for music in most_views_music %}
 											<li>
-<!--												<iframe width="150" height="150" src="{{ music.link }}"></iframe>-->
-												<iframe width="150" height="150" src="https://www.youtube.com/embed/2JyW4yAyTl0"></iframe>
-												<a href="{% url 'music' music.title %}">{{ music.title }}</a>
+												<a href="{% url 'music' music.title %}">
+													{% if music.image == "/static/image/song_photo_default.png" %}
+														<img width="150" height="150" src="{{ music.image }}">
+													{% else %}
+														<img width="150" height="150" src="{{ music.image.url }}">
+													{% endif %}
+													title: {{ music.title }} </br>
+													views: {{ music.views }} </br>
+													likes: {{ music.likes }}
+												</a>
 											</li>
 											{% endfor %}
 										</ul>
@@ -71,12 +78,20 @@
 									<img class="fg1" src="{% static 'image/fg2.png' %}">
 								</div>
 								<div class="firstline">
-									{% if all_music %}
+									{% if most_likes_music %}
 										<ul class="square1234">
-											{% for music in all_music %}
+											{% for music in most_likes_music %}
 											<li>
-												<iframe width="150" height="150" src="{{ music.link }}"></iframe>
-												<a href="{% url 'music' music.title %}">{{ music.title }}</a>
+												<a href="{% url 'music' music.title %}">
+													{% if music.image == "/static/image/song_photo_default.png" %}
+														<img width="150" height="150" src="{{ music.image }}">
+													{% else %}
+														<img width="150" height="150" src="{{ music.image.url }}">
+													{% endif %}
+													title: {{ music.title }} </br>
+													views: {{ music.views }} </br>
+													likes: {{ music.likes }}
+												</a>
 											</li>
 											{% endfor %}
 										</ul>
@@ -88,44 +103,25 @@
 					<div class="music-right">
 						<div id="singer">
 							Musician-Join us
-						</div>
-						<div id="singer1">
-							<div class="singer-pic">
-								<div class="singer-name">
-									Singername
-								</div>
+							<div id="checkmore">
+								<a href="{% url 'music' %}">MORE→</a>
 							</div>
 						</div>
-						<div id="singer2">
+						<div id="singer-border">
 							<div class="singer-pic">
-								<div class="singer-name">
-									Singername
-								</div>
+							{% if all_creators %}
+								{% for creator in all_creators %}
+										<div class="singer-name">
+											<a href="{% url 'music' creator.firstname %}">{{ creator.firstname }}, {{ creator.lastname }}</a>
+										</div>
+										{% if creator.image == "/static/image/user_photo_default.png" %}
+											<img width="150" height="150" src="{{ creator.image }}">
+										{% else %}
+											<img width="150" height="150" src="{{ creator.image.url }}">
+										{% endif %}
+								{% endfor %}
+							{% endif %}
 							</div>
-						</div>
-						<div id="singer3">
-							<div class="singer-pic">
-								<div class="singer-name">
-									Singername
-								</div>
-							</div>
-						</div>
-						<div id="singer4">
-							<div class="singer-pic">
-								<div class="singer-name">
-									Singername
-								</div>
-							</div>
-						</div>
-						<div id="singer5">
-							<div class="singer-pic">
-								<div class="singer-name">
-									Singername
-								</div>
-							</div>
-						</div>
-						<div id="checkmore">
-							MORE→
 						</div>
 					</div>
 				</div>

@@ -251,7 +251,7 @@ button {
 .square{
 	position: relative;
 	width: 650px;
-	height: 513px;
+	height: 600px;
 	border-bottom: 1px solid #000;
 }
 .square .firstline{
@@ -259,7 +259,7 @@ button {
 	top: 80px;
 	height: 214px;
 	width: 100%;
-
+	text-align: center;
 }
 .square .firstline .square1234{
 	margin: 0 auto;
@@ -355,6 +355,7 @@ button {
 	top: 80px;
 	height: 214px;
 	width: 100%;
+	text-align: center;
 }
 .square2 .firstline .square1234{
 	margin: 0 auto;
@@ -502,49 +503,23 @@ button {
 	left: 30px;
 	border-bottom: 1px solid black;
 }
-#singer1{
+#singer-border {
 	position: absolute;
 	width: 200px;
 	height: 85px;
 	left: 30px;
-	border: 1px solid black;
-	top:41px ;
+	top:60px ;
 }
-#singer2{
-	position: absolute;
-	width: 200px;
-	height: 85px;
-	left: 30px;
-	border: 1px solid black;
-	top:141px ;
+
+#singer-border img {
+    width:90px;
+    height:90px;
+    border-right: 1px solid black;
 }
-#singer3{
-	position: absolute;
-	width: 200px;
-	height: 85px;
-	left: 30px;
-	border: 1px solid black;
-	top:243px ;
-}
-#singer4{
-	position: absolute;
-	width: 200px;
-	height: 85px;
-	left: 30px;
-	border: 1px solid black;
-	top:345px ;
-}
-#singer5{
-	position: absolute;
-	width: 200px;
-	height: 85px;
-	left: 30px;
-	border: 1px solid black;
-	top:447px ;
-}
+
 #checkmore{
 	position: absolute;
-	top: 540px;
+	top: 30px;
 	right: 15px;
 	font-family: bgtx;
 	font-size: 18px;
@@ -552,17 +527,17 @@ button {
 .singer-pic{
 	width: 85px;
 	height: 86px;
-	border-right: 1px solid black;
 }
 .singer-name{
 	width: 115px;
-	height: 100%;
-	line-height: 86px;
+	height: 90px;
+	line-height: 90px;
 	position: absolute;
-	left: 86px;
+	left: 90px;
 	overflow: hidden;
-	margin: 0 auto;
+	margin: 0px 5px;
 	text-align: center;
+    border: 1px solid black;
 }
 
 #form2{

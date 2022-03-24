@@ -15,14 +15,14 @@ class UserProfile(models.Model):
     firstname = models.CharField(max_length=64, blank=True)
     lastname = models.CharField(max_length=64, blank=True)
     type = models.CharField(max_length=10, choices=USER_TYPE, default='Listener')
-    image = models.ImageField(upload_to='images/%Y/%m', default='images/default.png', max_length=200, verbose_name='Profile photo')
+    image = models.ImageField(max_length=200, upload_to='image/', default='/static/image/user_photo_default.png', verbose_name='Profile photo')
 
     def __str__(self):
         return self.user.username
 
 
 class Song(models.Model):
-    title = models.CharField(max_length=64)
+    title = models.CharField(max_length=64, unique=True)
     link = models.URLField(unique=True)
     musician_name = models.CharField(max_length=64)         # the musician
     album_title = models.CharField(max_length=64)
@@ -30,6 +30,7 @@ class Song(models.Model):
     average_rating = models.IntegerField(default=0)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='image/', default='/static/image/song_photo_default.png', max_length=200, verbose_name='Music photo')
 
 
 

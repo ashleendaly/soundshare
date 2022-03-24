@@ -60,7 +60,7 @@ body{
 	position: absolute;
 	left: 410px;
 	width: 410px;
-	height: 600px;
+	height: 700px;
 	background: white;
 	border-radius: 4px;
 	box-shadow: 0 0 8px rgb(0 0 0 / 10%);
@@ -109,7 +109,7 @@ body{
 	border-radius: 15px;
 	background-color:rgb(64,149,215);
 	width: 256px;
-	top: 350px;
+	top: 400px;
 	left: 80px;
 	height: 45px;
 	font-family:"Segoe UI";

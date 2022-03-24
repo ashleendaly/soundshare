@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+{% extends 'soundshare/base.html' %}
 {% load staticfiles %}
-<html>
-<link rel="stylesheet" href="{% static "css/login.css" %}">
-    <head>
-        <title>Login</title>
-    </head>
-    <body>
+
+{% block title_block %}
+	Music
+{% endblock %}
+
+{% block body_block %}
         <div id="login">
             <div id="logo" onclick="javascript:document.getElementById('03').click()">
                 <img id="logo3"  alt="logo" src="{% static 'image/Soundshare.png' %}">
@@ -39,5 +39,4 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+{% endblock %}

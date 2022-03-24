@@ -40,3 +40,14 @@
     text-align: center;
     width: 500px;
 }
+
+.but-like {
+	border-radius: 15px;
+	background-color:rgb(64,149,215);
+	width: 256px;
+	left: 80px;
+	height: 45px;
+	font-family:"Segoe UI";
+	color: white;
+	font-size: 20px;
+}
