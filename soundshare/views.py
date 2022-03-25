@@ -59,7 +59,7 @@ def user_logout(request):
 
 
 def forget_password(request):
-    return render(request, 'soundshare/login.html')
+    return render(request, 'soundshare/forgetpassword.html')
 
 
 def signup(request):

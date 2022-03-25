@@ -78,7 +78,6 @@ body{
 	text-align: center;
 	top: 100px;
 	line-height: 70px;
-	color: #ff9427;
 }
 #login-reg{
 	position: absolute;
@@ -119,6 +118,6 @@ body{
 #forgetpss{
 	position: absolute;
 	right: 75px;
-	bottom: 10px;
+	bottom: 0px;
 	font-size: 10px ;
 }
